@@ -1,0 +1,14 @@
+.main {
+  background-color: #F9F2EF;
+  color: #967675;
+}
+
+.section_title::after {
+  background-color: #967675;
+}
+
+.places_view-all {
+  color: #967675;
+  background-color: #F9F2EF;
+}
+/*# sourceMappingURL=colorTheme.css.map */

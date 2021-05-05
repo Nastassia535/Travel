@@ -1,0 +1,173 @@
+@import "fragment";
+
+  $family: 'Lato';
+  $style: normal;
+  $weight: normal;
+  $size: 16px;
+  $color: #102746;
+  $colorWhite:white;
+
+
+
+.advertisement
+{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 500px;
+    height: 550px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    font-family: $family;
+}
+
+.advert_forma
+{
+    width: 500px;
+    height: 550px;
+    border-radius: 50%;
+    background: linear-gradient(225deg, #f0f0f0, #cacaca);
+    box-shadow:  -29px 29px 58px #bebebe,
+                29px -29px 58px #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: none;
+    font-family: $family;
+    font-style: $style;
+}
+
+.header_advertBan
+{
+    width: 100px;
+    height: 100px;
+}
+
+.advert_title
+{
+    font-weight: 200;
+    font-size: 30px;
+    line-height: 60px;
+    color:  #ac0051;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $family;
+    font-style: $style;
+}
+
+.advert_subtitle
+{
+    color: #102746;
+    max-width: 400px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 22px;
+}
+.advert_form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.advert_email
+{
+    position: relative;
+    padding: 1em 2em;
+    text-align: center;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0px hsla(220, 80%, 70%, 1),
+      0 4px 5px 1px hsla(0, 0%, 10%, 0.1);
+    color:  #ac0051;;
+    font-weight: bold;
+    transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
+    
+}
+
+.advert_checkbox
+{
+    max-width: 180px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    // padding: 10px, 5px;
+    margin-top: 10px;
+}
+
+#radioButton
+{
+    margin-top: 15px;
+    margin-right: 10px;
+}
+.checkbox
+{
+    text-align: center;
+    padding: 0;
+}
+
+.advert_submit 
+{
+    position: relative;
+    text-align: center;
+    padding: 1em 2em;
+    background-color: hsl(0, 0%, 100%);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 0 0px hsla(220, 80%, 70%, 1),
+      0 4px 5px 1px hsla(0, 0%, 10%, 0.1);
+    color: hsl(0, 0%, 10%);
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: box-shadow 100ms ease-out, background-color 100ms ease-out;
+}
+  
+  /* USUAL FEEDBACK */
+  
+.advert_submit:hover,
+.advert_submit:focus,
+.advert_submit:active 
+{
+    outline: none;
+}
+  
+.advert_submit:hover 
+{
+    cursor: pointer;
+    background-color: hsl(220, 80%, 97%);
+}
+  
+.advert_submit:active 
+{
+    background-color: hsl(220, 80%, 94%);
+}
+
+.error
+{
+    border: 2px solid red;
+}
+.success
+{
+    border: 2px solid hsla(220, 80%, 70%, 1);
+}
+
+.block_for_close
+{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    margin-left: 80%;  
+}
+
+// .xxx
+// {
+//     width: 40px;
+//     height: 40px;
+//     background: white;
+//     color: yellow;
+// }

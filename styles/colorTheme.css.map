@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIA,AAAA,KAAK,CACL;EACI,gBAAgB,EALF,OAAO;EAMrB,KAAK,EALG,OAAO;CAMlB;;AAED,AAAA,cAAc,AAAA,OAAO,CACrB;EACI,gBAAgB,EAVR,OAAO;CAWlB;;AAED,AAAA,gBAAgB,CAChB;EACI,KAAK,EAfG,OAAO;EAgBf,gBAAgB,EAjBF,OAAO;CAkBxB",
+    "sources": [
+        "colorTheme.scss"
+    ],
+    "names": [],
+    "file": "colorTheme.css"
+}

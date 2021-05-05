@@ -1,0 +1,620 @@
+/* lato-regular - latin */
+  @import "fragment";
+  // @import "advertisement";
+
+  $family: 'Lato';
+  $style: normal;
+  $weight: normal;
+  $size: 16px;
+  $color: #102746;
+  $colorWhite:white;
+  $colorBlue: #1B7DFF;
+
+  html
+{
+    box-sizing: border-box;
+} 
+
+*, *::after, *::before
+{
+    box-sizing: inherit;
+}
+
+body
+{
+  font-family: $family;
+  font-style: $style;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+  line-height: 24px;
+}
+
+img
+{
+  max-width: 100%;
+  height: auto;
+}
+
+.wraper
+{
+  max-width: 1060px;
+  margin: 0 auto; 
+}
+
+.wraper_full
+{
+  max-width: 1262px;
+  margin: 0 auto; 
+}
+
+.section_title
+  // чтоб сделать всем заголовкам одинаковые стили
+{
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.section_title::after
+// линия после заголовка
+{
+  display: block;
+  content: '';
+  // обязательо указать контент
+  width: 253px;
+  height: 3px;
+  background-color: #006DFE;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+}     
+
+//   Header styles start
+
+.header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+  
+.header_wraper
+{
+  display: flex;
+  flex-direction: row;
+    // wrap отвечает за перенос контента, против наслоения
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 56px;
+}
+
+.header_list
+{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.header_item
+{
+    margin-right: 82px;
+}
+
+//   Убираем последний margin у последнего li
+.header_item:last-child
+{
+  margin-right: 0;
+}  
+
+.header_link
+{
+  font-size: 18px;
+  color: $colorWhite;
+  text-decoration: none;
+}  
+
+.header_link:hover, .header_link:focus, .header_link:active
+{
+  opacity: .75;
+}  
+
+.header_switch_icon
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $weight;
+  width: 45px;
+  height: 45px;
+  margin-left: 5px;   
+}
+
+  //   Header styles end
+
+  //   intro styles start
+
+.intro
+{
+  min-height: 100vh;
+  background: url(../images/Hero.png) no-repeat center;
+  background-size: cover;
+  //   картинка покрывает блок при любых его размерах
+  padding-top: 263px;
+  padding-bottom: 223px;
+}  
+
+.header_intro_title
+{
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 60px;
+  color: $colorWhite;
+  max-width: 619px;
+  margin-bottom: 22px;
+  .text-icon
+  {
+      position: relative;
+  }
+}  
+
+.icon-anim 
+{
+  animation: blink 1s linear infinite both;
+}
+@-webkit-keyframes blink 
+{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink 
+{
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro_subtitle
+{
+  color: $colorWhite;
+  max-width: 546px;
+  margin-bottom: 59px;
+}    
+
+.search-form_info
+{
+  display: flex;
+  flex-wrap: wrap;   
+}
+
+.seatch-form_field
+{
+  width: 297px;
+  background: transparent url(../images/svg/Circle-icon.svg) no-repeat left 6px;
+  background-size: 20px;
+  border: 0;
+  border-bottom: 2px solid #BFC0C5;
+  margin-right: 61px;
+  padding-left: 43px;
+  padding-bottom: 24px;
+  // для placeholder
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: $colorWhite;   
+}
+
+.seatch-form_field:last-child
+{
+  margin-right: 60px;
+}  
+
+.seatch-form_field::placeholder
+{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: $colorWhite;   
+}
+
+.seatch-form_submit
+{
+  padding: 15px, 39px;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: $colorWhite;
+  background-color:$colorBlue;
+  border: 0;   
+}
+    
+.seatch-form_submit:hover, .hseatch-form_submit:focus, .seatch-form_submit:active
+  {
+    background-color: #355a8a;
+  }
+  // <!-- intro styles end -->
+
+  // <!-- benefits styles start -->
+
+  .benefits
+{
+  margin-bottom: 31px;
+}
+
+.benefits_wrap
+{
+  max-width: 1262px;
+  background-color: $colorWhite;
+  margin: 0 auto;
+  // по центру
+  box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+  position: relative;
+  // указываем родителя
+}
+
+.benefits_title
+{
+  width: 100%;
+  font-family: $family;
+  font-style: $style;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  padding: 93px 100px 88px 100px;
+  // верх, право, низ, слева
+  position: absolute;
+  // позиционируем к родителю
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  // сдвигаем этот блок вверх
+  background-color: $colorWhite;
+}
+
+.benefits_cards
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 55px;
+  padding: 0 100px;
+  margin-bottom: 131px;
+}
+
+.benefits_card
+{
+  grid-column: span 1;
+  // наши карточки будут занимать по одной колонке
+  margin-bottom: 112px;   
+}
+
+.benefits_card-pic
+{
+  margin-bottom: 37px;
+  max-width: 66px;
+
+}
+
+.benefits_card-pic-thumb
+{
+  display: block;
+}
+.benefits_card-title
+{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 26px;
+}
+
+.benefits_card-desc
+{
+  margin-bottom: 39px;
+}
+
+.benefits_card-more
+{
+  color: #006DFE;
+  text-decoration: none;
+  // убираю подчеркивание ссылки
+  display: inline-block;
+  padding-right: 59px;
+  // это про стрелку 
+  background: url(../images/svg/Arrow-righ.svg) no-repeat 95% center;
+  transition: .2s all;
+  // планое движение стрелки
+}
+
+.benefits_card-more:hover, .benefits_card-more:focus
+{
+  background: url(../images/svg/Arrow-righ.svg) no-repeat right center;
+}
+
+// <!-- benefits styles end -->
+
+
+
+// -- Places style start______>
+
+.places_caption
+{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 36px;
+  // все элементы в строке будут выравниваться относительно строки в которой лежит заголовок
+ 
+}
+
+.places_view-all
+{
+  text-align: right;
+  color: #006DFE;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(../images/svg/Arrow-righ.svg) no-repeat right center;
+}
+
+.places_view-all:hover, .places_view-all:focus
+{
+  opacity: .65;
+}
+
+.places_title
+{
+  margin-right: 15px;
+}
+
+.places_cards
+{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  padding-bottom: 131px;
+}
+
+.places_card
+{
+  position: relative;
+  // чтоб не было налезания картинок
+  overflow: hidden;
+}
+
+.places_card::after
+{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 24, 36, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2; 
+}
+
+.places_card:hover, .places_card-pic:hover
+{
+  transform: scale(1.05);
+}
+
+.places_card-pic_size_lg
+{
+  height: 354px;
+  object-fit: cover;
+  // указывает как изображение будет маштабироваться внутри контейнера при сжатии идет акцент на главное
+}
+
+.places_card-pic_size_sm
+{
+  height: 283px;
+  object-fit: cover;
+}
+
+.places_card_size_lg
+{
+  grid-column: span 3;
+}
+
+.places_card_size_sm
+{
+  grid-column: span 2;
+}
+
+.places_card-link
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+.places_card:hover, .places_card-pic:hover
+{
+  animation: fade 0.3s linear forwards;
+}
+
+.places_card-title
+{
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 60px;
+  color: $colorWhite;
+  position: absolute;
+  bottom: 27px;
+  left: 29px;
+  z-index: 3;
+}
+
+.places_card-pic
+{
+  width: 100%;
+  transition: .15s all;
+}
+
+
+
+// -- Places style end______>
+
+
+// <!-- Tours style start -->
+
+.tours
+{
+  margin-bottom: 139px;
+}
+
+.tours_tour
+{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 0 108px;
+  align-items: center;
+  margin-bottom: 77px;
+}
+// делаю шторки
+
+.tour_1 
+{
+  width: 100%;
+  height: 343px;
+  margin-bottom: 77px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.left, .right
+{
+  width: 577px;
+  height: 343px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tour_info_1
+{
+  width: 100%;
+  height: 319px;
+  padding-left: 47px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.tour_1 .left, .tour_1 .right 
+{
+  width: 577px;
+  height: 343px;
+  display: none;
+  position: relative;
+}
+
+.tour_1 .left 
+{
+  background-image: url(../images/tour-1.png);
+  background-size: cover;
+  right: 100%;
+}
+
+.tour_1 .right 
+{
+  left: 100%;
+}
+
+
+.slide-left, .slide-right, .opacity-right, .opacity-left, .left
+{
+  display: none;
+}
+
+.tour_info
+{
+  padding-left: 47px;
+}
+
+.tour_title
+{
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 85px;
+}
+
+.tour_desc
+{
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 58px;
+}
+
+.tour_more
+{
+  text-align: right;
+  color: #006DFE;
+  text-decoration: none;
+  padding-right: 59px;
+  background: url(../images/svg/Arrow-righ.svg) no-repeat right center;
+}
+
+.tour_more:hover, .tour_more:focus
+{
+  opacity: .65;
+}
+
+//  <!-- Tours style end -->
+
+
+// <!-- Top styles start -->
+
+.top
+{
+  margin-bottom: 86px;
+}
+// <!-- Top styles end -->
+
+
+
+
+
+
+.parallax_foto 
+{
+ /* The image used */
+ background-image: url("../images/Paralax.png");
+ /* Set a specific height */
+ height: 609px;
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;   
+}

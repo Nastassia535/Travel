@@ -1,0 +1,21 @@
+$colorBlack: #111111;
+$colorBackgraund: #F9F2EF;
+$colorColor:#967675;
+
+.main
+{
+    background-color:$colorBackgraund;
+    color: $colorColor;
+}
+
+.section_title::after
+{
+    background-color: $colorColor;
+}
+
+.places_view-all
+{
+    color: $colorColor;
+    background-color: $colorBackgraund;
+}
+
