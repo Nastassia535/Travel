@@ -5,7 +5,7 @@
     let blink = $('.text-icon');    // Анимированный курсор
     let newText = "Discover Amazing places in Japan";   // Текст который будет печататься
     const MAX_LENGTH = 64;          // Максимальная длинна строки с учетом ширины 'header'
-    let timeUpdate = 15000;          // Общее время цикла
+    let timeUpdate = 1500000;          // Общее время цикла
     let timeWrite = 200;            // Время печатания одного символа(скорость)
     if(newText.length > MAX_LENGTH)
         newText = newText.slice(MAX_LENGTH);
@@ -67,6 +67,11 @@ $(window).on('scroll' , function(e){
     {
         let scroll_y = $(window).scrollTop();  
 
+        if (scroll_y > 50)
+            $('.header').addClass('header_active');
+        else 
+            $('.header').removeClass('header_active');
+        
         if(scroll_y > 1500 && DontShow)
         {
             DontShow = false;
